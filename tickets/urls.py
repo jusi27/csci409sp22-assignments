@@ -11,6 +11,8 @@ urlpatterns = [
     # Show Tickets search info
     # Example url /tickets/123456789
 
-    path('/<int:confirmation_number>', views.ticket_search)
+    path('/<int:confirmation_number>', views.ticket_search),
+    # added path Week 11 Assignment
+    path('/search/', views.search)
 
 ]

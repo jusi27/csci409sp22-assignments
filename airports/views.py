@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Airport
 
@@ -8,8 +7,8 @@ def index(request):
     airports = Airport.objects.all()
     # Create a displayable string. We will change this next week.
     # This is just to show some data.
-    #airport_list = ', '.join([a.airport_code for a in airports])
-    #return HttpResponse('Showing all airports: ' + airport_list)
+    # airport_list = ', '.join([a.airport_code for a in airports])
+    # return HttpResponse('Showing all airports: ' + airport_list)
     context = {'airports': airports}
     return render(request, 'airports/index.html', context)
 

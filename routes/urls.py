@@ -7,9 +7,9 @@ from . import views
 urlpatterns = [
     # Get index view
     # Examples url: /flights/
-    path('/', views.index),
+    path('', views.index),
     # Show Routes search info
     # Example url /routes/search/MYR/LAX
 
-    path('/search/<str:origin>/<str:destination>', views.routes_search)
+    path('search/<str:origin>/<str:destination>', views.routes_search),
 ]

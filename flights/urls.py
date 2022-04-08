@@ -7,11 +7,11 @@ from . import views
 urlpatterns = [
     # Get index view
     # Examples url: /flights/
-    path('/', views.index),
+    path('', views.index),
     # Show Flight search info
     # Example url /flights/search/MYR/LAX
-
-    path('/search/<str:origin>/<str:destination>', views.flight_search),
+    path('search/', views.search),
+    path('search/<str:origin>/<str:destination>', views.flight_search),
     # added path week 11 assignment
-    path('/search/', views.search),
+
 ]
